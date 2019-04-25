@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>OpenEngiadina</title>
+  <style type="text/css">
+   body{
+       margin:40px auto;
+       max-width:650px;
+       line-height:1.6;
+       font-size:18px;
+       color:#444;
+       padding:0 10px;
+       font-family: 'Helvetica', sans-serif;
+   }
+   h1,h2,h3{
+       line-height:1.2;
+   }
+   #footer {
+       text-align: right;
+       font-size: 75%;
+   }
+   code{white-space: pre-wrap;}
+   span.smallcaps{font-variant: small-caps;}
+   span.underline{text-decoration: underline;}
+   div.column{display: inline-block; vertical-align: top; width: 50%;}
+   dl>dt{font-weight: bold;}
+   figure{width:100%; margin:0;}
+   figure>img{max-width: 100%; }
+   figure>img.align-center{margin-left: auto; margin-right: auto; display: block;}
+   img.align-center+figcaption{text-align: center;}
+   .attention{background-color: #ffffdd;}
+   .admonition-title{font-weight: bold;}
+     </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div id="content">
+<header>
+
+<h1 class="title">OpenEngiadina</h1>
+</header>
+<p>OpenEngiadina is a platform for creating, publishing and using open local knowledge.</p>
+<h1 id="overview"><span class="header-section-number">1</span> Overview</h1>
+<h2 id="local-knowledge"><span class="header-section-number">1.1</span> Local Knowledge</h2>
+<p>There are thousands of little pieces of information and data that describe the social, cultural and natural environment of an area, we call such data local knowledge.</p>
+<p>Local knowledge may include:</p>
+<ul>
+<li>points of interest (e.g. a mineral spring)</li>
+<li>social and cultural activities (e.g. a concert)</li>
+<li>descriptions for outdoor activities (e.g. hiking routes or snow reports)</li>
+<li>local businesses (e.g. a book shop, a bakery or a hotel)</li>
+<li>classifieds (e.g. somebody wants to sell a bicycle)</li>
+</ul>
+<p>Local knowledge is produced and used by various people and organizations (actors). Actors that may interact with OpenEngiadina include:</p>
+<ul>
+<li>locals: be informed on social and cultural activities, publish a classified</li>
+<li>local businesses: publish information about their business</li>
+<li>cultural and social organizations: announce events</li>
+<li>tourists: discover activities and places to visit</li>
+</ul>
+<h2 id="open-knowledge"><span class="header-section-number">1.2</span> Open Knowledge</h2>
+<p>We believe that <em>local knowledge</em> should be freely available to everyone to use and republish as they wish, local knowledge needs to be <a href="https://opendefinition.org/">open data</a>. However, having access to data is not enough. Data needs to be accessible (useful and efficiently useable). Local Knowledge needs to be <a href="https://okfn.org/opendata/">open knowledge</a>.</p>
+<p>Technically local knowledge is made open and accessible by describing it as <em>linked data</em>.</p>
+<h2 id="crowdsourcing-and-decentralization"><span class="header-section-number">1.3</span> Crowdsourcing and decentralization</h2>
+<p>The vast amount of diverse data points that comprise local knowledge make local knowledge practically impossible to centrally manage or control. We observe that the various actors themselves need the means to publish data (e.g. a local book store can publish its changed opening times without appealing to any central authority). Note that large tech giants also rely on individual actors to publish data in <a href="https://developers.google.com/search/docs/guides/intro-structured-data">a structured way</a>.</p>
+<p>Local knowledge can be expressed in an accessible way as <em>linked data</em>. The <em>ActivityPub</em> protocol provides the means to publish such knowledge in a decentralized manner. Additionally the ActivityPub protocol allows for social interactions such as commenting on pieces of knowledge, liking them or sharing them - features well known from popular social networks.</p>
+<h2 id="hackability"><span class="header-section-number">1.4</span> Hackability</h2>
+<p>OpenEngiadina is not only meant to be useable by a wide population but should encourage development of the platform itself and applications interfacing with it. In particular OpenEngiadina should be useable for projects at local schools and hackatons.</p>
+<p>This is accomplished by:</p>
+<ul>
+<li>using open standards, protocols and software</li>
+<li>releasing <a href="https://en.wikipedia.org/wiki/Free_and_open-source_software">free and open-source software</a></li>
+<li>providing adequate documentation</li>
+</ul>
+<p>Some ideas for extensions or applications using OpenEngiadina include:</p>
+<ul>
+<li>Augmented Reality using local knowledge</li>
+<li>Gamification</li>
+<li>Bridges to import data from existing sources</li>
+</ul>
+<h1 id="standards-protocols-and-existing-technology"><span class="header-section-number">2</span> Standards, protocols and existing technology</h1>
+<h2 id="linked-data"><span class="header-section-number">2.1</span> Linked Data</h2>
+<p>Knowledge may be represented as a <a href="https://en.wikipedia.org/wiki/Semantic_network">graph</a> consisting of vertices which represent things and edges which represent relations between things. To make this consistent and machine-understandable it is important to name everything (things and relations) so that semantically same things (and relations) can be identified across different sets of data.</p>
+<p>A clever convention is to use internet addresses (<a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">URIs</a>) as names and place data about the thing at its URI. Now things can be referred to by their URI and data about the thing can be retrieved by simply looking up the URI. This allows data that is published in different places on the internet to be linked together and to be used very efficiently by machines, this is the core idea of <a href="https://www.w3.org/DesignIssues/LinkedData.html">linked data</a>.</p>
+<p>Large collections of names and rules (schemas) for describing plenty of things <a href="https://schema.org/">are already defined</a> and <a href="https://developers.google.com/search/docs/guides/mark-up-content">widely</a> <a href="https://www.bing.com/webmaster/help/marking-up-your-site-with-structured-data-3a93e731">used</a>. There are <a href="https://en.wikipedia.org/wiki/Linked_data#Datasets">many existing linked data sets</a> (e.g. <a href="https://www.wikidata.org/">Wikidata</a>).</p>
+<p>OpenEngiadina primarly uses the <a href="https://json-ld.org/">JSON-LD</a> format to represent linked data.</p>
+<h2 id="activitypub"><span class="header-section-number">2.2</span> ActivityPub</h2>
+<p><a href="https://www.w3.org/TR/activitypub/">ActivityPub</a> is an open and decentralized protocol for distributed publishing and social networking. It resembles traditional e-mail in the sense that actors (persons, organizations or bots) have accounts on servers of their choice and can publish messages to other actors (who might be on different servers). The protocol handles delivery of the messages to the recipient actors. Unlike e-mail the messages are structured data, <em>linked data</em>.</p>
+<p>The structure of the messages is defined in the <a href="https://www.w3.org/TR/activitypub/">ActivityStream</a> standard. Messages are activities such as creating, updating, deleting, liking or sharing an object. ActivityStream is serialized as JSON-LD and objects can be any <em>linked data</em>.</p>
+<p><a href="https://lwn.net/Articles/741218/">Historically</a> the ActivityPub protocol was born out of improvements to <a href="https://ostatus.github.io/spec/OStatus%201.0%20Draft%202.html">previous protocols</a> for federated social networking.</p>
+<h3 id="fediverse"><span class="header-section-number">2.2.1</span> Fediverse</h3>
+<p>A number of services already exist implementing the ActivityPub protocol for federation. That is content from one service is available on an other (provided the client can display the content). The universe of these federated services is called the <em>fediverse</em>. OpenEngiadina will be part of the fediverse.</p>
+<p>Some existing services:</p>
+<ul>
+<li><a href="https://joinmastodon.org/">Mastodon</a>: federated microblogging platform</li>
+<li><a href="https://joinpeertube.org/">PeerTube</a>: decentralized video hosting network</li>
+<li><a href="https://writefreely.org/">WriteFreely</a>: platform for federated blogging</li>
+<li><a href="https://friendi.ca/">friendica</a>: decentralized social network</li>
+<li><a href="https://pixelfed.org/">PixelFed</a>: federated image sharing</li>
+</ul>
+<p><a href="https://the-federation.info/">Currently there are</a> almost 3 million users on the fediverse spread out on 4'500 servers.</p>
+<h1 id="goals"><span class="header-section-number">3</span> Goals</h1>
+<p>The goal of this project is to provide an implementation of a backend that is capable of powering the platform as described above and develop initial clients and applications that demonstrate the functionalities.</p>
+<h2 id="backend"><span class="header-section-number">3.1</span> Backend</h2>
+<p>The backend implements the ActivityPub <a href="https://www.w3.org/TR/activitypub/#server-to-server-interactions">server to server interactions</a>, the ActivityPub <a href="https://www.w3.org/TR/activitypub/#client-to-server-interactions">client to server interactions</a> as well as additional functionalities specific to OpenEngiadina.</p>
+<p>Two existing implementations of the ActivityPub protocol exist that seem useable as a basis for the OpenEngiadina backend:</p>
+<ul>
+<li><a href="https://pleroma.social/">Pleroma</a>: Widely used for microblogging. However implementation <a href="https://gitlab.com/moodlenet/meta/wikis/generic-activitypub-library">is not general enough</a> and only supports certain types of ActivityPub objects.</li>
+<li><a href="https://commonspub.org/">CommonsPub</a>: Project to build a generic federated server based on the ActivityPub web standard. Project is still work in progress.</li>
+</ul>
+<p>It remains to be seen how and to what extent these existing implementations can be used.</p>
+<h3 id="content-discovery-searchability"><span class="header-section-number">3.1.1</span> Content discovery &amp; searchability</h3>
+<p>The ability to discover and search knowledge is extremely important. Further research in how this can be done (and is done in existing implementations) is required.</p>
+<p>Insight might be gained by studying existing frameworks for linked data and information retrieval such as <a href="https://jena.apache.org/">Apache Jena</a>, <a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a> and <a href="https://xapian.org/">Xapian</a>.</p>
+<h3 id="content-moderation"><span class="header-section-number">3.1.2</span> Content moderation</h3>
+<p>Given the <em>distributed manner of content creation</em> it is important that operators of backends have the ability to moderate content. Research into existing tools for moderation available in current ActivityPub implementaitons and what kind of tools are needed for OpenEngiadina is required.</p>
+<h2 id="clients-applications"><span class="header-section-number">3.2</span> Clients &amp; Applications</h2>
+<h3 id="map"><span class="header-section-number">3.2.1</span> Map</h3>
+<p>An application that shows a map with points of interest. An initial version exists <a href="https://miaengiadina.github.io/geopub/">here</a>.</p>
+<h3 id="data-bridges"><span class="header-section-number">3.2.2</span> Data bridges</h3>
+<p>Various existing data sources may be imported into the OpenEngiadina platform via bridges, i.e. applications that grab data from an existing source, restructure it into linked data and publish via ActivityPub to OpenEngiadina.</p>
+<h3 id="distributed-content-management-system"><span class="header-section-number">3.2.3</span> Distributed content management system</h3>
+<p>Various actors may publish content. From this published content, one specific actor, the <em>curator</em>, can select content that should appear on a web site.</p>
+<p>Technically this may be implemented by defining a special collection of content that should appear on the web site and allowing the curator to add and remove content from this collection (with the ActivityStream <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-add"><code>Add</code></a> and <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-remove"><code>Remove</code></a> activities). The web site is then generated from the content in this special collection.</p>
+<p>Visitors of the web site do not need to know about the distributed mechanism in the background. They simply see the curated content.</p>
+<h3 id="event-calendar"><span class="header-section-number">3.2.4</span> Event calendar</h3>
+<p>An application that shows a calendar view of events in a specific region.</p>
+<h3 id="existing-clients"><span class="header-section-number">3.2.5</span> Existing clients</h3>
+<p>There are existing ActivityPub clients (e.g. <a href="https://fedilab.app/">Fedilab</a> and <a href="https://whalebird.org/en/desktop/contents">Whalebird</a>). Research is required to what extent they can be used for OpenEngiadina (what content types do they support?).</p>
+<h1 id="about"><span class="header-section-number">4</span> About</h1>
+<p>OpenEngiadina is a project by <a href="https://www.miaengiadina.ch/">mia Engiadina</a>.</p>
+<h1 id="related-projects"><span class="header-section-number">5</span> Related projects</h1>
+<ul>
+<li><a href="https://www.tourismuszukunft.de/2018/11/dach-kg-auf-dem-weg-zum-touristischen-knowledge-graph/">DACH-KG</a>: Project to build a knowledge graph for all touristic relevant data.</li>
+</ul>
+</div>
+
+<div id="footer">
+  <hr>
+  <p>
+    OpenEngiadina
+      </p>
+</div>
+
+</body>
+</html>

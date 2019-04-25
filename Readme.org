@@ -1,0 +1,139 @@
+#+TITLE: OpenEngiadina
+#+OPTIONS: toc:nil
+
+OpenEngiadina is a platform for creating, publishing and using open local knowledge.
+
+* Overview
+
+** Local Knowledge
+
+There are thousands of little pieces of information and data that describe the social, cultural and natural environment of an area, we call such data local knowledge.
+
+Local knowledge may include:
+ - points of interest (e.g. a mineral spring)
+ - social and cultural activities (e.g. a concert)
+ - descriptions for outdoor activities (e.g. hiking routes or snow reports)
+ - local businesses (e.g. a book shop, a bakery or a hotel)
+ - classifieds (e.g. somebody wants to sell a bicycle)
+
+Local knowledge is produced and used by various people and organizations (actors). Actors that may interact with OpenEngiadina include:
+ - locals: be informed on social and cultural activities, publish a classified
+ - local businesses: publish information about their business
+ - cultural and social organizations: announce events
+ - tourists: discover activities and places to visit
+
+** Open Knowledge
+
+We believe that [[*Local Knowledge][local knowledge]] should be freely available to everyone to use and republish as they wish, local knowledge needs to be [[https://opendefinition.org/][open data]]. However, having access to data is not enough. Data needs to be accessible (useful and efficiently useable). Local Knowledge needs to be [[https://okfn.org/opendata/][open knowledge]].
+
+Technically local knowledge is made open and accessible by describing it as [[*Linked Data][linked data]].
+
+** Crowdsourcing and decentralization
+
+The vast amount of diverse data points that comprise local knowledge make local knowledge practically impossible to centrally manage or control. We observe that the various actors themselves need the means to publish data (e.g. a local book store can publish its changed opening times without appealing to any central authority). Note that large tech giants also rely on individual actors to publish data in [[https://developers.google.com/search/docs/guides/intro-structured-data][a structured way]].
+
+Local knowledge can be expressed in an accessible way as [[*Linked Data][linked data]]. The [[*ActivityPub][ActivityPub]] protocol provides the means to publish such knowledge in a decentralized manner. Additionally the ActivityPub protocol allows for social interactions such as commenting on pieces of knowledge, liking them or sharing them - features well known from popular social networks.
+
+** Hackability
+
+OpenEngiadina is not only meant to be useable by a wide population but should encourage development of the platform itself and applications interfacing with it. In particular OpenEngiadina should be useable for projects at local schools and hackatons.
+
+This is accomplished by:
+- using open standards, protocols and software
+- releasing [[https://en.wikipedia.org/wiki/Free_and_open-source_software][free and open-source software]]
+- providing adequate documentation
+
+Some ideas for extensions or applications using OpenEngiadina include:
+- Augmented Reality using local knowledge
+- Gamification
+- Bridges to import data from existing sources
+
+* Standards, protocols and existing technology
+
+** Linked Data
+
+Knowledge may be represented as a [[https://en.wikipedia.org/wiki/Semantic_network][graph]] consisting of vertices which represent things and edges which represent relations between things. To make this consistent and machine-understandable it is important to name everything (things and relations) so that semantically same things (and relations) can be identified across different sets of data. 
+
+A clever convention is to use internet addresses ([[https://en.wikipedia.org/wiki/Uniform_Resource_Identifier][URIs]]) as names and place data about the thing at its URI. Now things can be referred to by their URI and data about the thing can be retrieved by simply looking up the URI. This allows data that is published in different places on the internet to be linked together and to be used very efficiently by machines, this is the core idea of [[https://www.w3.org/DesignIssues/LinkedData.html][linked data]].
+
+Large collections of names and rules (schemas) for describing plenty of things [[https://schema.org/][are already defined]] and [[https://developers.google.com/search/docs/guides/mark-up-content][widely]] [[https://www.bing.com/webmaster/help/marking-up-your-site-with-structured-data-3a93e731][used]]. There are [[https://en.wikipedia.org/wiki/Linked_data#Datasets][many existing linked data sets]] (e.g. [[https://www.wikidata.org/][Wikidata]]).
+
+OpenEngiadina primarly uses the [[https://json-ld.org/][JSON-LD]] format to represent linked data.
+
+** ActivityPub
+
+[[https://www.w3.org/TR/activitypub/][ActivityPub]] is an open and decentralized protocol for distributed publishing and social networking. It resembles traditional e-mail in the sense that actors (persons, organizations or bots) have accounts on servers of their choice and can publish messages to other actors (who might be on different servers). The protocol handles delivery of the messages to the recipient actors. Unlike e-mail the messages are structured data, [[*Linked Data][linked data]]. 
+
+The structure of the messages is defined in the [[https://www.w3.org/TR/activitypub/][ActivityStream]] standard. Messages are activities such as creating, updating, deleting, liking or sharing an object. ActivityStream is serialized as JSON-LD and objects can be any [[*Linked Data][linked data]].
+
+[[https://lwn.net/Articles/741218/][Historically]] the ActivityPub protocol was born out of improvements to [[https://ostatus.github.io/spec/OStatus%201.0%20Draft%202.html][previous protocols]] for federated social networking.
+
+*** Fediverse
+
+A number of services already exist implementing the ActivityPub protocol for federation. That is content from one service is available on an other (provided the client can display the content). The universe of these federated services is called the /fediverse/. OpenEngiadina will be part of the fediverse.
+
+Some existing services:
+- [[https://joinmastodon.org/][Mastodon]]: federated microblogging platform
+- [[https://joinpeertube.org/][PeerTube]]: decentralized video hosting network
+- [[https://writefreely.org/][WriteFreely]]: platform for federated blogging
+- [[https://friendi.ca/][friendica]]: decentralized social network
+- [[https://pixelfed.org/][PixelFed]]: federated image sharing
+
+[[https://the-federation.info/][Currently there are]] almost 3 million users on the fediverse spread out on 4'500 servers.
+
+* Goals
+
+The goal of this project is to provide an implementation of a backend that is capable of powering the platform as described above and develop initial clients and applications that demonstrate the functionalities.
+
+** Backend
+
+The backend implements the ActivityPub [[https://www.w3.org/TR/activitypub/#server-to-server-interactions][server to server interactions]], the ActivityPub [[https://www.w3.org/TR/activitypub/#client-to-server-interactions][client to server interactions]] as well as additional functionalities specific to OpenEngiadina.
+
+Two existing implementations of the ActivityPub protocol exist that seem useable as a basis for the OpenEngiadina backend:
+- [[https://pleroma.social/][Pleroma]]: Widely used for microblogging. However implementation [[https://gitlab.com/moodlenet/meta/wikis/generic-activitypub-library][is not general enough]] and only supports certain types of ActivityPub objects.
+- [[https://commonspub.org/][CommonsPub]]: Project to build a generic federated server based on the ActivityPub web standard. Project is still work in progress.
+
+It remains to be seen how and to what extent these existing implementations can be used.
+
+*** Content discovery & searchability 
+
+The ability to discover and search knowledge is extremely important. Further research in how this can be done (and is done in existing implementations) is required.
+
+Insight might be gained by studying existing frameworks for linked data and information retrieval such as [[https://jena.apache.org/][Apache Jena]], [[https://www.w3.org/TR/sparql11-query/][SPARQL]] and [[https://xapian.org/][Xapian]].
+
+*** Content moderation
+
+Given the [[*Crowdsourcing and decentralization][distributed manner of content creation]] it is important that operators of backends have the ability to moderate content. Research into existing tools for moderation available in current ActivityPub implementaitons and what kind of tools are needed for OpenEngiadina is required.
+
+** Clients & Applications
+*** Map
+
+An application that shows a map with points of interest. An initial version exists [[https://miaengiadina.github.io/geopub/][here]].
+
+*** Data bridges
+
+Various existing data sources may be imported into the OpenEngiadina platform via bridges, i.e. applications that grab data from an existing source, restructure it into linked data and publish via ActivityPub to OpenEngiadina.
+
+*** Distributed content management system
+
+Various actors may publish content. From this published content, one specific actor, the /curator/, can select content that should appear on a web site.
+
+Technically this may be implemented by defining a special collection of content that should appear on the web site and allowing the curator to add and remove content from this collection (with the ActivityStream [[https://www.w3.org/TR/activitystreams-vocabulary/#dfn-add][~Add~]] and [[https://www.w3.org/TR/activitystreams-vocabulary/#dfn-remove][~Remove~]] activities). The web site is then generated from the content in this special collection.
+
+Visitors of the web site do not need to know about the distributed mechanism in the background. They simply see the curated content.
+
+*** Event calendar
+
+An application that shows a calendar view of events in a specific region.
+
+*** Existing clients
+
+There are existing ActivityPub clients (e.g. [[https://fedilab.app/][Fedilab]] and [[https://whalebird.org/en/desktop/contents][Whalebird]]). Research is required to what extent they can be used for OpenEngiadina (what content types do they support?).
+
+* About
+
+OpenEngiadina is a project by [[https://www.miaengiadina.ch/][mia Engiadina]].
+
+* Related projects
+
+- [[https://www.tourismuszukunft.de/2018/11/dach-kg-auf-dem-weg-zum-touristischen-knowledge-graph/][DACH-KG]]: Project to build a knowledge graph for all touristic relevant data.

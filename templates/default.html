@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="$lang$" xml:lang="$lang$"$if(dir)$ dir="$dir$"$endif$>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+$for(author-meta)$
+  <meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+  <meta name="dcterms.date" content="$date-meta$" />
+$endif$
+$if(keywords)$
+  <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$" />
+$endif$
+  <title>$if(title-prefix)$$title-prefix$ – $endif$$pagetitle$</title>
+  <style type="text/css">
+   body{
+       margin:40px auto;
+       max-width:650px;
+       line-height:1.6;
+       font-size:18px;
+       color:#444;
+       padding:0 10px;
+       font-family: 'Helvetica', sans-serif;
+   }
+   h1,h2,h3{
+       line-height:1.2;
+   }
+   #footer {
+       text-align: right;
+       font-size: 75%;
+   }
+   code{white-space: pre-wrap;}
+   span.smallcaps{font-variant: small-caps;}
+   span.underline{text-decoration: underline;}
+   div.column{display: inline-block; vertical-align: top; width: 50%;}
+   dl>dt{font-weight: bold;}
+   figure{width:100%; margin:0;}
+   figure>img{max-width: 100%; }
+   figure>img.align-center{margin-left: auto; margin-right: auto; display: block;}
+   img.align-center+figcaption{text-align: center;}
+   .attention{background-color: #ffffdd;}
+   .admonition-title{font-weight: bold;}
+   $if(quotes)$
+   q { quotes: "“" "”" "‘" "’"; }
+   $endif$
+  </style>
+$if(highlighting-css)$
+  <style type="text/css">
+$highlighting-css$
+  </style>
+$endif$
+$for(css)$
+  <link rel="stylesheet" href="$css$">
+$endfor$
+$if(math)$
+  $math$
+$endif$
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+$for(header-includes)$
+  $header-includes$
+$endfor$
+</head>
+<body>
+$for(include-before)$
+$include-before$
+$endfor$
+$if(title)$
+<div id="content">
+<header>
+
+<h1 class="title">$title$</h1>
+$if(subtitle)$
+<p class="subtitle">$subtitle$</p>
+$endif$
+$for(author)$
+<p class="author">$author$</p>
+$endfor$
+$if(date)$
+$if(version)$
+<p class="date">
+Version: <i>$version$</i><br>
+Date: <i>$date$</i>
+</p>
+$endif$
+$endif$
+</header>
+$endif$
+$if(toc)$
+<nav id="$idprefix$TOC">
+<h2>Table of Contents</h2>
+$table-of-contents$
+</nav>
+$endif$
+$body$
+$for(include-after)$
+$include-after$
+$endfor$
+</div>
+
+<div id="footer">
+  <hr>
+  <p>
+  $if(title)$
+  $title$
+  $endif$
+  $if(date)$
+  $if(version)$
+  <i>$version$</i> <i>$date$</i>
+  $endif$
+  $endif$
+  </p>
+</div>
+
+</body>
+</html>
