@@ -1,7 +1,7 @@
-#+TITLE: OpenEngiadina
+#+TITLE: openEngiadina
 #+OPTIONS: toc:nil
 
-OpenEngiadina is a platform for creating, publishing and using open local knowledge.
+openEngiadina is a platform for creating, publishing and using open local knowledge.
 
 * Overview
 
@@ -16,7 +16,7 @@ Local knowledge may include:
  - local businesses (e.g. a book shop, a bakery or a hotel)
  - classifieds (e.g. somebody wants to sell a bicycle)
 
-Local knowledge is produced and used by various people and organizations (actors). Actors that may interact with OpenEngiadina include:
+Local knowledge is produced and used by various people and organizations (actors). Actors that may interact with openEngiadina include:
  - locals: be informed on social and cultural activities, publish a classified
  - local businesses: publish information about their business
  - cultural and social organizations: announce events
@@ -36,7 +36,7 @@ Local knowledge can be expressed in an accessible way as [[*Linked Data][linked 
 
 ** Open Development
 
-OpenEngiadina is not only meant to be useable by a wide population but should encourage development of the platform itself and applications interfacing with it. In particular OpenEngiadina should be useable for projects at local schools and hackatons.
+openEngiadina is not only meant to be useable by a wide population but should encourage development of the platform itself and applications interfacing with it. In particular openEngiadina should be useable for projects at local schools and hackatons.
 
 This is accomplished by:
 - using open standards, protocols and software
@@ -44,7 +44,7 @@ This is accomplished by:
 - providing adequate documentation
 - development environment can be set up with minimal requirements
 
-Some ideas for extensions or applications using OpenEngiadina include:
+Some ideas for extensions or applications using openEngiadina include:
 - Augmented Reality using local knowledge
 - Gamification
 - Bridges to import data from existing sources
@@ -59,7 +59,7 @@ A clever convention is to use internet addresses ([[https://en.wikipedia.org/wik
 
 Large collections of names and rules (schemas) for describing plenty of things [[https://schema.org/][are already defined]] and [[https://developers.google.com/search/docs/guides/mark-up-content][widely]] [[https://www.bing.com/webmaster/help/marking-up-your-site-with-structured-data-3a93e731][used]]. There are [[https://en.wikipedia.org/wiki/Linked_data#Datasets][many existing linked data sets]] (e.g. [[https://www.wikidata.org/][Wikidata]]).
 
-OpenEngiadina primarly uses the [[https://json-ld.org/][JSON-LD]] format to represent linked data.
+openEngiadina primarly uses the [[https://json-ld.org/][JSON-LD]] format to represent linked data.
 
 ** ActivityPub
 
@@ -71,7 +71,7 @@ The structure of the messages is defined in the [[https://www.w3.org/TR/activity
 
 *** Fediverse
 
-A number of services already exist implementing the ActivityPub protocol for federation. That is content from one service is available on an other (provided the client can display the content). The universe of these federated services is called the /fediverse/. OpenEngiadina will be part of the fediverse.
+A number of services already exist implementing the ActivityPub protocol for federation. That is content from one service is available on an other (provided the client can display the content). The universe of these federated services is called the /fediverse/. openEngiadina will be part of the fediverse.
 
 Some existing services:
 - [[https://joinmastodon.org/][Mastodon]]: federated microblogging platform
@@ -88,9 +88,9 @@ The goal of this project is to provide an implementation of a backend that is ca
 
 ** Backend
 
-The backend implements the ActivityPub [[https://www.w3.org/TR/activitypub/#server-to-server-interactions][server to server interactions]], the ActivityPub [[https://www.w3.org/TR/activitypub/#client-to-server-interactions][client to server interactions]] as well as additional functionalities specific to OpenEngiadina.
+The backend implements the ActivityPub [[https://www.w3.org/TR/activitypub/#server-to-server-interactions][server to server interactions]], the ActivityPub [[https://www.w3.org/TR/activitypub/#client-to-server-interactions][client to server interactions]] as well as additional functionalities specific to openEngiadina.
 
-Two existing implementations of the ActivityPub protocol exist that seem useable as a basis for the OpenEngiadina backend:
+Two existing implementations of the ActivityPub protocol exist that seem useable as a basis for the openEngiadina backend:
 - [[https://pleroma.social/][Pleroma]]: Widely used for microblogging. However implementation [[https://gitlab.com/moodlenet/meta/wikis/generic-activitypub-library][is not general enough]] and only supports certain types of ActivityPub objects.
 - [[https://commonspub.org/][CommonsPub]]: Project to build a generic federated server based on the ActivityPub web standard. Project is still work in progress.
 
@@ -104,7 +104,7 @@ Insight might be gained by studying existing frameworks for linked data and info
 
 *** Content moderation
 
-Given the [[*Crowdsourcing and decentralization][distributed manner of content creation]] it is important that operators of backends have the ability to moderate content. Research into existing tools for moderation available in current ActivityPub implementaitons and what kind of tools are needed for OpenEngiadina is required.
+Given the [[*Crowdsourcing and decentralization][distributed manner of content creation]] it is important that operators of backends have the ability to moderate content. Research into existing tools for moderation available in current ActivityPub implementaitons and what kind of tools are needed for openEngiadina is required.
 
 ** Clients & Applications
 *** Map
@@ -113,7 +113,7 @@ An application that shows a map with points of interest. An initial version exis
 
 *** Data bridges
 
-Various existing data sources may be imported into the OpenEngiadina platform via bridges, i.e. applications that grab data from an existing source, restructure it into linked data and publish via ActivityPub to OpenEngiadina.
+Various existing data sources may be imported into the openEngiadina platform via bridges, i.e. applications that grab data from an existing source, restructure it into linked data and publish via ActivityPub to openEngiadina.
 
 *** Distributed content management system
 
@@ -129,11 +129,11 @@ An application that shows a calendar view of events in a specific region.
 
 *** Existing clients
 
-There are existing ActivityPub clients (e.g. [[https://fedilab.app/][Fedilab]] and [[https://whalebird.org/en/desktop/contents][Whalebird]]). Research is required to what extent they can be used for OpenEngiadina (what content types do they support?).
+There are existing ActivityPub clients (e.g. [[https://fedilab.app/][Fedilab]] and [[https://whalebird.org/en/desktop/contents][Whalebird]]). Research is required to what extent they can be used for openEngiadina (what content types do they support?).
 
 * About
 
-OpenEngiadina is a project by [[https://www.miaengiadina.ch/][mia Engiadina]].
+openEngiadina is a project by [[https://www.miaengiadina.ch/][miaEngiadina]].
 
 * Related projects
 
