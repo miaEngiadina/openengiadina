@@ -134,7 +134,3 @@ There are existing ActivityPub clients (e.g. [[https://fedilab.app/][Fedilab]] a
 * About
 
 openEngiadina is a project by [[https://www.miaengiadina.ch/][miaEngiadina]].
-
-* Related projects
-
-- [[https://www.tourismuszukunft.de/2018/11/dach-kg-auf-dem-weg-zum-touristischen-knowledge-graph/][DACH-KG]]: Project to build a knowledge graph for all touristic relevant data.
