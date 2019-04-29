@@ -34,7 +34,7 @@ The vast amount of diverse data points that comprise local knowledge make local 
 
 Local knowledge can be expressed in an accessible way as [[*Linked Data][linked data]]. The [[*ActivityPub][ActivityPub]] protocol provides the means to publish such knowledge in a decentralized manner. Additionally the ActivityPub protocol allows for social interactions such as commenting on pieces of knowledge, liking them or sharing them - features well known from popular social networks.
 
-** Hackability
+** Open Development
 
 OpenEngiadina is not only meant to be useable by a wide population but should encourage development of the platform itself and applications interfacing with it. In particular OpenEngiadina should be useable for projects at local schools and hackatons.
 
@@ -42,6 +42,7 @@ This is accomplished by:
 - using open standards, protocols and software
 - releasing [[https://en.wikipedia.org/wiki/Free_and_open-source_software][free and open-source software]]
 - providing adequate documentation
+- development environment can be set up with minimal requirements
 
 Some ideas for extensions or applications using OpenEngiadina include:
 - Augmented Reality using local knowledge
