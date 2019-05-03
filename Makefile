@@ -4,7 +4,7 @@ PANDOC_OPTIONS = --template templates/default.html \
 	--number-sections \
 	-t html5
 
-DOCS = docs/index.html
+DOCS = docs/index.html docs/objectives.html
 
 docs/%.html: %.org templates/default.html
 	mkdir -p docs

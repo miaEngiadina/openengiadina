@@ -1,0 +1,71 @@
+#+TITLE: Objectives
+#+COLUMNS: %40ITEM(Key result) %17DEADLINE(Deadline) %17EFFORT(Estimated effort){:} %7TODO(Status) %7RESULT(Metric){mean}
+
+#+BEGIN: columnview :hlines 1 :id global :indent 1
+| Key result                                        | Deadline         | Estimated effort | Status | Metric |
+|---------------------------------------------------+------------------+------------------+--------+--------|
+| Requirements & Research                           | <2020-04-26 Sun> |          4d 0:00 |        |    1.0 |
+| \_  Project description                           |                  |               2d | DONE   |      1 |
+| \_  Protocol research                             |                  |               1d | DONE   |      1 |
+| \_  Initial demonstrator                          |                  |               1d | DONE   |      1 |
+|---------------------------------------------------+------------------+------------------+--------+--------|
+| Backend: Basics                                   | <2019-06-07 Fri> |          5d 0:00 |        |        |
+| \_  Minimal implementation                        |                  |               4d | TODO   |        |
+| \_  Research: Storage and querying of linked data |                  |               1d | TODO   |        |
+#+END:
+
+
+* Requirements & Research
+  DEADLINE: <2020-04-26 Sun>
+
+Understand requirements and research existing technology.
+
+** DONE Project description
+   CLOSED: [2019-05-03 Fri 09:40]
+   :PROPERTIES:
+   :RESULT:   1
+   :EFFORT: 2d
+   :END:
+
+See [[https://miaengiadina.github.io/openengiadina]].
+
+** DONE Protocol research
+   CLOSED: [2019-05-03 Fri 09:40]
+   :PROPERTIES:
+   :RESULT:   1
+   :EFFORT: 1d
+   :END:
+
+Research on existing protocols and implementations.
+
+** DONE Initial demonstrator
+   CLOSED: [2019-05-03 Fri 09:41]
+   :PROPERTIES:
+   :RESULT:   1
+   :EFFORT: 1d
+   :END:
+
+A simple demonstrator showcasing the ActivityPub protocol for distributed publishing of structured data. Demonstrator is available [[https://miaengiadina.github.io/geopub/][here]].
+
+* Backend: Basics
+  DEADLINE: <2019-06-07 Fri>
+
+Implement a basic backend as described in the project description.
+
+** TODO Minimal implementation
+   :PROPERTIES:
+   :Effort:   4d
+   :END:
+
+Implement a minimal working backend:
+
+- [[https://www.w3.org/TR/activitypub/#client-to-server-interactions][ActivityPub Client to Server Interactions]] 
+- Support the [[https://miaengiadina.github.io/geopub/][GeoPub]] demonstrator
+- First steps towards [[https://www.w3.org/TR/activitypub/#server-to-server-interactions][Server to Server Interactions]]
+
+** TODO Research: Storage and querying of linked data
+   :PROPERTIES:
+   :Effort:   1d
+   :END:
+
+How can linked data be stored and efficiently queried? What are the existing technologies?
