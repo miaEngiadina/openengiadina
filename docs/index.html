@@ -8,7 +8,7 @@
   <style type="text/css">
    body{
        margin:40px auto;
-       max-width:650px;
+       max-width:800px;
        line-height:1.6;
        font-size:18px;
        color:#444;
@@ -88,6 +88,8 @@
 <li>Gamification</li>
 <li>Bridges to import data from existing sources</li>
 </ul>
+<h2 id="objectives"><span class="header-section-number">1.5</span> Objectives</h2>
+<p>The objectives of the project, ideas and current work-in-progress is documented <a href="./objectives.html">here</a>.</p>
 <h1 id="standards-protocols-and-existing-technology"><span class="header-section-number">2</span> Standards, protocols and existing technology</h1>
 <h2 id="linked-data"><span class="header-section-number">2.1</span> Linked Data</h2>
 <p>Knowledge may be represented as a <a href="https://en.wikipedia.org/wiki/Semantic_network">graph</a> consisting of vertices which represent things and edges which represent relations between things. To make this consistent and machine-understandable it is important to name everything (things and relations) so that semantically same things (and relations) can be identified across different sets of data.</p>
@@ -109,41 +111,7 @@
 <li><a href="https://pixelfed.org/">PixelFed</a>: federated image sharing</li>
 </ul>
 <p><a href="https://the-federation.info/">Currently there are</a> almost 3 million users on the fediverse spread out on 4'500 servers.</p>
-<h1 id="goals"><span class="header-section-number">3</span> Goals</h1>
-<p>The goal of this project is to provide an implementation of a backend that is capable of powering the platform as described above and develop initial clients and applications that demonstrate the functionalities.</p>
-<h2 id="backend"><span class="header-section-number">3.1</span> Backend</h2>
-<p>The backend implements the ActivityPub <a href="https://www.w3.org/TR/activitypub/#server-to-server-interactions">server to server interactions</a>, the ActivityPub <a href="https://www.w3.org/TR/activitypub/#client-to-server-interactions">client to server interactions</a> as well as additional functionalities specific to openEngiadina.</p>
-<p>Two existing implementations of the ActivityPub protocol exist that seem useable as a basis for the openEngiadina backend:</p>
-<ul>
-<li><a href="https://pleroma.social/">Pleroma</a>: Widely used for microblogging. However implementation <a href="https://gitlab.com/moodlenet/meta/wikis/generic-activitypub-library">is not general enough</a> and only supports certain types of ActivityPub objects.</li>
-<li><a href="https://commonspub.org/">CommonsPub</a>: Project to build a generic federated server based on the ActivityPub web standard. Project is still work in progress.</li>
-</ul>
-<p>It remains to be seen how and to what extent these existing implementations can be used.</p>
-<h3 id="content-discovery-searchability"><span class="header-section-number">3.1.1</span> Content discovery &amp; searchability</h3>
-<p>The ability to discover and search knowledge is extremely important. Further research in how this can be done (and is done in existing implementations) is required.</p>
-<p>Insight might be gained by studying existing frameworks for linked data and information retrieval such as <a href="https://jena.apache.org/">Apache Jena</a>, <a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a> and <a href="https://xapian.org/">Xapian</a>.</p>
-<h3 id="content-moderation"><span class="header-section-number">3.1.2</span> Content moderation</h3>
-<p>Given the <em>distributed manner of content creation</em> it is important that operators of backends have the ability to moderate content. Research into existing tools for moderation available in current ActivityPub implementaitons and what kind of tools are needed for openEngiadina is required.</p>
-<h2 id="clients-applications"><span class="header-section-number">3.2</span> Clients &amp; Applications</h2>
-<h3 id="map"><span class="header-section-number">3.2.1</span> Map</h3>
-<p>An application that shows a map with points of interest. An initial version exists <a href="https://miaengiadina.github.io/geopub/">here</a>.</p>
-<h3 id="data-bridges"><span class="header-section-number">3.2.2</span> Data bridges</h3>
-<p>Various existing data sources may be imported into the openEngiadina platform via bridges, i.e. applications that grab data from an existing source, restructure it into linked data and publish via ActivityPub to openEngiadina.</p>
-<p>Potential data sources include:</p>
-<ul>
-<li>Outdoor tours (e.g. from <a href="https://www.gipfelbuch.ch/">Gipfelbuch.ch</a>, <a href="http://www.hikr.org/">Hikr.org</a> or <a href="https://www.outdooractive.com/">outdooractive</a>)</li>
-<li>Weather data (e.g. from <a href="https://www.meteoswiss.admin.ch/">MeteoSwiss</a>)</li>
-<li>Touristic platforms (e.g. <a href="https://discover.swiss/">discover.swiss</a>)</li>
-</ul>
-<h3 id="distributed-content-management-system"><span class="header-section-number">3.2.3</span> Distributed content management system</h3>
-<p>Various actors may publish content. From this published content, one specific actor, the <em>curator</em>, can select content that should appear on a web site.</p>
-<p>Technically this may be implemented by defining a special collection of content that should appear on the web site and allowing the curator to add and remove content from this collection (with the ActivityStream <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-add"><code>Add</code></a> and <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-remove"><code>Remove</code></a> activities). The web site is then generated from the content in this special collection.</p>
-<p>Visitors of the web site do not need to know about the distributed mechanism in the background. They simply see the curated content.</p>
-<h3 id="event-calendar"><span class="header-section-number">3.2.4</span> Event calendar</h3>
-<p>An application that shows a calendar view of events in a specific region.</p>
-<h3 id="existing-clients"><span class="header-section-number">3.2.5</span> Existing clients</h3>
-<p>There are existing ActivityPub clients (e.g. <a href="https://fedilab.app/">Fedilab</a> and <a href="https://whalebird.org/en/desktop/contents">Whalebird</a>). Research is required to what extent they can be used for openEngiadina (what content types do they support?).</p>
-<h1 id="about"><span class="header-section-number">4</span> About</h1>
+<h1 id="about"><span class="header-section-number">3</span> About</h1>
 <p>openEngiadina is a project by <a href="https://www.miaengiadina.ch/">miaEngiadina</a>.</p>
 </div>
 

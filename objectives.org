@@ -1,7 +1,7 @@
 #+TITLE: Objectives
 #+COLUMNS: %40ITEM(Key result) %17DEADLINE(Deadline) %17EFFORT(Estimated effort){:} %7TODO(Status) %7RESULT(Metric){mean}
 
-#+BEGIN: columnview :hlines 1 :id global :indent 1
+#+BEGIN: columnview :hlines 1 :id global :indent 2
 | Key result                                        | Deadline         | Estimated effort | Status | Metric |
 |---------------------------------------------------+------------------+------------------+--------+--------|
 | Requirements & Research                           | <2020-04-26 Sun> |          4d 0:00 |        |    1.0 |
@@ -12,6 +12,18 @@
 | Backend: Basics                                   | <2019-06-07 Fri> |          5d 0:00 |        |        |
 | \_  Minimal implementation                        |                  |               4d | TODO   |        |
 | \_  Research: Storage and querying of linked data |                  |               1d | TODO   |        |
+|---------------------------------------------------+------------------+------------------+--------+--------|
+| Futurelog & Ideas                                 |                  |                  |        |        |
+| \_  Clients & Applications                        |                  |                  |        |        |
+| \_    Data bridges                                |                  |                  |        |        |
+| \_    Distributed content management system       |                  |                  |        |        |
+| \_    Event calendar                              |                  |                  |        |        |
+| \_    Map                                         |                  |                  |        |        |
+| \_    Existing clients                            |                  |                  |        |        |
+| \_  Backend                                       |                  |                  |        |        |
+| \_    ActivityPub Server to Server interactions   |                  |                  |        |        |
+| \_    Content moderation                          |                  |                  |        |        |
+| \_    Content discovery & searchability           |                  |                  |        |        |
 #+END:
 
 
@@ -69,3 +81,47 @@ Implement a minimal working backend:
    :END:
 
 How can linked data be stored and efficiently queried? What are the existing technologies?
+* Futurelog & Ideas
+A collection of ideas. Not yet scheduled for research & development.
+** Clients & Applications
+*** Data bridges
+
+ Import data from existing sources.
+
+ Potential data sources include:
+ - Outdoor tours (e.g. from [[https://www.gipfelbuch.ch/][Gipfelbuch.ch]], [[http://www.hikr.org/][Hikr.org]] or [[https://www.outdooractive.com/][outdooractive]])
+ - Weather data (e.g. from [[https://www.meteoswiss.admin.ch/][MeteoSwiss]])
+ - Touristic platforms (e.g. [[https://discover.swiss/][discover.swiss]])
+
+*** Distributed content management system
+
+ Various actors may publish content. From this published content, one specific actor, the /curator/, can select content that should appear on a web site.
+
+ Technically this may be implemented by defining a special collection of content that should appear on the web site and allowing the curator to add and remove content from this collection (with the ActivityStream [[https://www.w3.org/TR/activitystreams-vocabulary/#dfn-add][~Add~]] and [[https://www.w3.org/TR/activitystreams-vocabulary/#dfn-remove][~Remove~]] activities). The web site is then generated from the content in this special collection.
+
+ Visitors of the web site do not need to know about the distributed mechanism in the background. They simply see the curated content.
+*** Event calendar
+
+ An application that shows a calendar view of events in a specific region.
+*** Map
+
+ An application that shows a map with points of interest. An initial version exists [[https://miaengiadina.github.io/geopub/][here]].
+
+*** Existing clients
+
+  There are existing ActivityPub clients (e.g. [[https://fedilab.app/][Fedilab]] and [[https://whalebird.org/en/desktop/contents][Whalebird]]). Research is required to what extent they can be used for openEngiadina (what content types do they support?).
+
+** Backend
+*** ActivityPub Server to Server interactions
+
+Enable federation with other ActivityPub services.
+
+*** Content moderation
+
+ Given the [[*Crowdsourcing and decentralization][distributed manner of content creation]] it is important that operators of backends have the ability to moderate content. Research into existing tools for moderation available in current ActivityPub implementaitons and what kind of tools are needed for openEngiadina is required.
+*** Content discovery & searchability 
+
+  The ability to discover and search knowledge is extremely important. Further research in how this can be done (and is done in existing implementations) is required.
+
+  Insight might be gained by studying existing frameworks for linked data and information retrieval such as [[https://jena.apache.org/][Apache Jena]], [[https://www.w3.org/TR/sparql11-query/][SPARQL]] and [[https://xapian.org/][Xapian]].
+

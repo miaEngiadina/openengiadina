@@ -4,7 +4,6 @@
 openEngiadina is a platform for creating, publishing and using open local knowledge.
 
 * Overview
-
 ** Local Knowledge
 
 There are thousands of little pieces of information and data that describe the social, cultural and natural environment of an area, we call such data local knowledge.
@@ -49,8 +48,9 @@ Some ideas for extensions or applications using openEngiadina include:
 - Gamification
 - Bridges to import data from existing sources
 
+** Objectives
+The objectives of the project, ideas and current work-in-progress is documented [[./objectives.html][here]].
 * Standards, protocols and existing technology
-
 ** Linked Data
 
 Knowledge may be represented as a [[https://en.wikipedia.org/wiki/Semantic_network][graph]] consisting of vertices which represent things and edges which represent relations between things. To make this consistent and machine-understandable it is important to name everything (things and relations) so that semantically same things (and relations) can be identified across different sets of data. 
@@ -81,60 +81,6 @@ Some existing services:
 - [[https://pixelfed.org/][PixelFed]]: federated image sharing
 
 [[https://the-federation.info/][Currently there are]] almost 3 million users on the fediverse spread out on 4'500 servers.
-
-* Goals
-
-The goal of this project is to provide an implementation of a backend that is capable of powering the platform as described above and develop initial clients and applications that demonstrate the functionalities.
-
-** Backend
-
-The backend implements the ActivityPub [[https://www.w3.org/TR/activitypub/#server-to-server-interactions][server to server interactions]], the ActivityPub [[https://www.w3.org/TR/activitypub/#client-to-server-interactions][client to server interactions]] as well as additional functionalities specific to openEngiadina.
-
-Two existing implementations of the ActivityPub protocol exist that seem useable as a basis for the openEngiadina backend:
-- [[https://pleroma.social/][Pleroma]]: Widely used for microblogging. However implementation [[https://gitlab.com/moodlenet/meta/wikis/generic-activitypub-library][is not general enough]] and only supports certain types of ActivityPub objects.
-- [[https://commonspub.org/][CommonsPub]]: Project to build a generic federated server based on the ActivityPub web standard. Project is still work in progress.
-
-It remains to be seen how and to what extent these existing implementations can be used.
-
-*** Content discovery & searchability 
-
-The ability to discover and search knowledge is extremely important. Further research in how this can be done (and is done in existing implementations) is required.
-
-Insight might be gained by studying existing frameworks for linked data and information retrieval such as [[https://jena.apache.org/][Apache Jena]], [[https://www.w3.org/TR/sparql11-query/][SPARQL]] and [[https://xapian.org/][Xapian]].
-
-*** Content moderation
-
-Given the [[*Crowdsourcing and decentralization][distributed manner of content creation]] it is important that operators of backends have the ability to moderate content. Research into existing tools for moderation available in current ActivityPub implementaitons and what kind of tools are needed for openEngiadina is required.
-
-** Clients & Applications
-*** Map
-
-An application that shows a map with points of interest. An initial version exists [[https://miaengiadina.github.io/geopub/][here]].
-
-*** Data bridges
-
-Various existing data sources may be imported into the openEngiadina platform via bridges, i.e. applications that grab data from an existing source, restructure it into linked data and publish via ActivityPub to openEngiadina.
-
-Potential data sources include:
-- Outdoor tours (e.g. from [[https://www.gipfelbuch.ch/][Gipfelbuch.ch]], [[http://www.hikr.org/][Hikr.org]] or [[https://www.outdooractive.com/][outdooractive]])
-- Weather data (e.g. from [[https://www.meteoswiss.admin.ch/][MeteoSwiss]])
-- Touristic platforms (e.g. [[https://discover.swiss/][discover.swiss]])
-
-*** Distributed content management system
-
-Various actors may publish content. From this published content, one specific actor, the /curator/, can select content that should appear on a web site.
-
-Technically this may be implemented by defining a special collection of content that should appear on the web site and allowing the curator to add and remove content from this collection (with the ActivityStream [[https://www.w3.org/TR/activitystreams-vocabulary/#dfn-add][~Add~]] and [[https://www.w3.org/TR/activitystreams-vocabulary/#dfn-remove][~Remove~]] activities). The web site is then generated from the content in this special collection.
-
-Visitors of the web site do not need to know about the distributed mechanism in the background. They simply see the curated content.
-
-*** Event calendar
-
-An application that shows a calendar view of events in a specific region.
-
-*** Existing clients
-
-There are existing ActivityPub clients (e.g. [[https://fedilab.app/][Fedilab]] and [[https://whalebird.org/en/desktop/contents][Whalebird]]). Research is required to what extent they can be used for openEngiadina (what content types do they support?).
 
 * About
 
