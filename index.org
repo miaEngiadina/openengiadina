@@ -131,4 +131,7 @@ A web platform for promoting access to education by enabling peer-to-peer course
 openEngiadina shares the idea of crowdsourced creation of events but builds on the ActivityPub protocol.
 * About
 
-openEngiadina is a project by [[https://www.miaengiadina.ch/][miaEngiadina]].
+For questions, feedback and comments please contact pukkamustard (pukkamustard [at] posteo [dot] net).
+
+openEngiadina is a project supported by [[https://www.miaengiadina.ch/][miaEngiadina]].
+
