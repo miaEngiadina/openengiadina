@@ -134,6 +134,8 @@ See also the [[http://comunica.linkeddatafragments.org/][Comunica Framework]] pu
 A web platform for promoting access to education by enabling peer-to-peer courses.
 
 openEngiadina shares the idea of crowdsourced creation of events but builds on the ActivityPub protocol.
+*** [[https://gitlab.com/spritely/spritely][Spritely]]
+Spritely aims to create a federated social network and is conducting various small experiments towards that goal. openEngiadina makes use of the research being conducted.
 * About
 
 For questions, feedback and comments please contact pukkamustard (pukkamustard [at] posteo [dot] net).
