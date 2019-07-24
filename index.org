@@ -62,7 +62,12 @@ Some ideas for extensions or applications using openEngiadina include:
 
 ** Objectives
 The objectives of the project, ideas and current work-in-progress is documented [[./objectives.html][here]].
-* Standards, protocols, existing technology and projects
+* Semantic Social Network
+
+openEngiadina is a cross between a knowledge repository and a social network. Knowledge is created trough social interactions and knowledge can be used in social interactions. We call this a [[https://www.downes.ca/cgi-bin/page.cgi?post=46][Semantic Social Network]].
+
+The two fundamental technolgies used to achieve this are Linked Data and the ActivityPub protocol.
+
 ** Linked Data
 
 Knowledge may be represented as a [[https://en.wikipedia.org/wiki/Semantic_network][graph]] consisting of vertices which represent things and edges which represent relations between things. To make this consistent and machine-understandable it is important to name everything (things and relations) so that semantically same things (and relations) can be identified across different sets of data. 
@@ -100,7 +105,7 @@ Some existing services:
 
 [[https://the-federation.info/][Currently there are]] almost 3 million users on the fediverse spread out on 4'500 servers.
 
-** Related projects
+* Related projects
 *** [[https://www.datatourisme.gouv.fr/][DATAtourisme]]
 Open Data platform for touristic data. DATAtourisme also uses a Triplestore as underlying database ([[https://wiki.blazegraph.com/wiki/index.php/Main_Page][Blazegraph]]).
 *** [[https://joinmastodon.org/][Mastodon]] and [[https://pleroma.social/][Pleroma]]
@@ -133,5 +138,5 @@ openEngiadina shares the idea of crowdsourced creation of events but builds on t
 
 For questions, feedback and comments please contact pukkamustard (pukkamustard [at] posteo [dot] net).
 
-openEngiadina is a project supported by [[https://www.miaengiadina.ch/][miaEngiadina]].
+openEngiadina is supported by [[https://www.miaengiadina.ch/][miaEngiadina]].
 

@@ -99,7 +99,9 @@
 </ul>
 <h2 id="objectives"><span class="header-section-number">1.5</span> Objectives</h2>
 <p>The objectives of the project, ideas and current work-in-progress is documented <a href="./objectives.html">here</a>.</p>
-<h1 id="standards-protocols-existing-technology-and-projects"><span class="header-section-number">2</span> Standards, protocols, existing technology and projects</h1>
+<h1 id="semantic-social-network"><span class="header-section-number">2</span> Semantic Social Network</h1>
+<p>openEngiadina is a cross between a knowledge repository and a social network. Knowledge is created trough social interactions and knowledge can be used in social interactions. We call this a <a href="https://www.downes.ca/cgi-bin/page.cgi?post=46">Semantic Social Network</a>.</p>
+<p>The two fundamental technolgies used to achieve this are Linked Data and the ActivityPub protocol.</p>
 <h2 id="linked-data"><span class="header-section-number">2.1</span> Linked Data</h2>
 <p>Knowledge may be represented as a <a href="https://en.wikipedia.org/wiki/Semantic_network">graph</a> consisting of vertices which represent things and edges which represent relations between things. To make this consistent and machine-understandable it is important to name everything (things and relations) so that semantically same things (and relations) can be identified across different sets of data.</p>
 <p>A clever convention is to use internet addresses (<a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier">URIs</a>) as names and place data about the thing at its URI. Now things can be referred to by their URI and data about the thing can be retrieved by simply looking up the URI. This allows data that is published in different places on the internet to be linked together and to be used very efficiently by machines, this is the core idea of <a href="https://www.w3.org/DesignIssues/LinkedData.html">linked data</a>.</p>
@@ -123,31 +125,31 @@
 <li><a href="https://pixelfed.org/">PixelFed</a>: federated image sharing</li>
 </ul>
 <p><a href="https://the-federation.info/">Currently there are</a> almost 3 million users on the fediverse spread out on 4'500 servers.</p>
-<h2 id="related-projects"><span class="header-section-number">2.3</span> Related projects</h2>
-<h3 id="datatourisme"><span class="header-section-number">2.3.1</span> <a href="https://www.datatourisme.gouv.fr/">DATAtourisme</a></h3>
+<h1 id="related-projects"><span class="header-section-number">3</span> Related projects</h1>
+<h3 id="datatourisme"><span class="header-section-number">3.0.1</span> <a href="https://www.datatourisme.gouv.fr/">DATAtourisme</a></h3>
 <p>Open Data platform for touristic data. DATAtourisme also uses a Triplestore as underlying database (<a href="https://wiki.blazegraph.com/wiki/index.php/Main_Page">Blazegraph</a>).</p>
-<h3 id="mastodon-and-pleroma"><span class="header-section-number">2.3.2</span> <a href="https://joinmastodon.org/">Mastodon</a> and <a href="https://pleroma.social/">Pleroma</a></h3>
+<h3 id="mastodon-and-pleroma"><span class="header-section-number">3.0.2</span> <a href="https://joinmastodon.org/">Mastodon</a> and <a href="https://pleroma.social/">Pleroma</a></h3>
 <p>Popular Microblogging platforms that use the ActivityPub protocol.</p>
 <p>Both projects are <a href="https://gitlab.com/moodlenet/meta/wikis/generic-activitypub-library">restricted to a small set of object types</a> that can be shared. openEngiadina aims to support any object type.</p>
-<h3 id="ckan"><span class="header-section-number">2.3.3</span> <a href="http://ckan.org/">CKAN</a></h3>
+<h3 id="ckan"><span class="header-section-number">3.0.3</span> <a href="http://ckan.org/">CKAN</a></h3>
 <p>An open-source data portal platform widely used by public institutions to publish open data (e.g. <a href="https://zt.zuerich.com/en/open-data">Open Data Portal of Zürich Tourism</a>).</p>
 <p>openEngiadina aims to be compatible with CKAN portals to a high degree. Data available in CKAN portals should be readily usable from within openEngiadina.</p>
-<h3 id="commonspub"><span class="header-section-number">2.3.4</span> <a href="https://commonspub.org/">CommonsPub</a></h3>
+<h3 id="commonspub"><span class="header-section-number">3.0.4</span> <a href="https://commonspub.org/">CommonsPub</a></h3>
 <p>CommonsPub is a project to build a generic federated server, based on the ActivityPub web standard.</p>
 <p>Unlike CommonsPub openEngiadina uses a triplestore as underlying database.</p>
-<h3 id="solid"><span class="header-section-number">2.3.5</span> <a href="https://solid.inrupt.com/">Solid</a></h3>
+<h3 id="solid"><span class="header-section-number">3.0.5</span> <a href="https://solid.inrupt.com/">Solid</a></h3>
 <p>Sold aims to create decentralized web where users are in control of where and how their data is stored.</p>
 <p>openEngiadina intends to make use of many of the standards published by the project (e.g. <a href="http://solid.github.io/web-access-control-spec/">Web Access Control</a>).</p>
-<h3 id="linked-data-fragments"><span class="header-section-number">2.3.6</span> <a href="http://linkeddatafragments.org/">Linked Data Fragments</a></h3>
+<h3 id="linked-data-fragments"><span class="header-section-number">3.0.6</span> <a href="http://linkeddatafragments.org/">Linked Data Fragments</a></h3>
 <p>A project exploring how to query Linked Data that is spread across the web.</p>
 <p>openEngiadina aims to use results by the project for federated queries and for user interfaces that provide autocompletion by live querying existing data sets.</p>
 <p>See also the <a href="http://comunica.linkeddatafragments.org/">Comunica Framework</a> published by the project.</p>
-<h3 id="openki"><span class="header-section-number">2.3.7</span> <a href="https://openki.net/">Openki</a></h3>
+<h3 id="openki"><span class="header-section-number">3.0.7</span> <a href="https://openki.net/">Openki</a></h3>
 <p>A web platform for promoting access to education by enabling peer-to-peer courses.</p>
 <p>openEngiadina shares the idea of crowdsourced creation of events but builds on the ActivityPub protocol.</p>
-<h1 id="about"><span class="header-section-number">3</span> About</h1>
+<h1 id="about"><span class="header-section-number">4</span> About</h1>
 <p>For questions, feedback and comments please contact pukkamustard (pukkamustard [at] posteo [dot] net).</p>
-<p>openEngiadina is a project supported by <a href="https://www.miaengiadina.ch/">miaEngiadina</a>.</p>
+<p>openEngiadina is supported by <a href="https://www.miaengiadina.ch/">miaEngiadina</a>.</p>
 </div>
 
 <div id="footer">
