@@ -59,7 +59,7 @@
 <tbody>
 <tr class="odd">
 <td>Requirements &amp; Research</td>
-<td>&lt;2019-04-26 Sun&gt;</td>
+<td>&lt;2020-04-26 Sun&gt;</td>
 <td>DONE</td>
 </tr>
 <tr class="even">
@@ -93,76 +93,91 @@
 <td></td>
 </tr>
 <tr class="even">
+<td>Research: Semantic queries on existing public ActivityPub data</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
 <td>Minimal backend implementation</td>
 <td>&lt;2019-08-31 Sat&gt;</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>\_ <a href="https://www.w3.org/TR/activitypub/#client-to-server-interactions">ActivityPub Client to Server Interactions</a></td>
 <td></td>
 <td>TODO</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>\_ Support the <a href="https://miaengiadina.github.io/geopub/">GeoPub</a> demonstrator</td>
 <td></td>
 <td>TODO</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>\_ Interface with Blazegraph</td>
 <td></td>
 <td>TODO</td>
 </tr>
+<tr class="odd">
+<td>User interfaces for publishing linked social data</td>
+<td></td>
+<td></td>
+</tr>
 <tr class="even">
+<td>Beyond touristic data: a decentrallized book reading network</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
 <td>Futurelog &amp; Ideas</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>\_ Clients &amp; Applications</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>\_ Data bridges</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>\_ Distributed content management system</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>\_ Event calendar</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>\_ Map</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>\_ Existing clients</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>\_ Backend</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>\_ ActivityPub Server to Server interactions</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>\_ Content moderation</td>
 <td></td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>\_ Content discovery &amp; searchability</td>
 <td></td>
 <td></td>
@@ -189,15 +204,28 @@
 <p>There are <a href="https://en.wikipedia.org/wiki/Comparison_of_triplestores">plenty of triplestores</a> available. openEngiadina will use <a href="https://www.blazegraph.com/">Blazegraph</a> as underlying database.</p>
 <p>Blazegraph is a highly optimized triplestore (it can use a GPU to perform queries) that supports metadata about a triple itself via a mechanism called <em>Reification Done Right (RDR)</em>. The ability to do so is very important for features like access control (see also <a href="https://github.com/miaEngiadina/ap-rdr">initial experimentat to use RDR for access control</a>).</p>
 <p>The backend will be implemented in the <a href="https://elixir-lang.org/">Elixir</a> programming language. The language is well suited for network servers, code can be reused from existing projects (<a href="https://pleroma.social/">Pleroma</a> and <a href="http://commonspub.org/">CommonsPub</a>) and <a href="https://rdf-elixir.dev/">libraries for working with Linked Data</a> exist.</p>
-<h1 id="minimal-backend-implementation"><span class="header-section-number">3</span> Minimal backend implementation</h1>
+<h1 id="research-semantic-queries-on-existing-public-activitypub-data"><span class="header-section-number">3</span> Research: Semantic queries on existing public ActivityPub data</h1>
+<p>By crawling existing ActivityPub servers for public data we may be able to:</p>
+<ul>
+<li>Study the shape of data by analyzing links between posts and to outside data</li>
+<li>Provide an interface to run semantic queries on the data (<a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a>)</li>
+<li>Explore interesting queries and how new content could be discovered</li>
+</ul>
+<p>Data could be either fed into a triple store with built-in SPARQL support or by performing federated queries à la <a href="http://linkeddatafragments.org/">Linked Data Fragments</a>.</p>
+<p>An interface for perfoming queries might be very interesting and should be made public.</p>
+<h1 id="minimal-backend-implementation"><span class="header-section-number">4</span> Minimal backend implementation</h1>
 <p>DEADLINE: &lt;2019-08-31 Sat&gt; Implement a minimal working backend.</p>
-<h2 id="activitypub-client-to-server-interactions"><span class="header-section-number">3.1</span> <span class="todo TODO">TODO</span> <a href="https://www.w3.org/TR/activitypub/#client-to-server-interactions">ActivityPub Client to Server Interactions</a></h2>
-<h2 id="support-the-geopub-demonstrator"><span class="header-section-number">3.2</span> <span class="todo TODO">TODO</span> Support the <a href="https://miaengiadina.github.io/geopub/">GeoPub</a> demonstrator</h2>
-<h2 id="interface-with-blazegraph"><span class="header-section-number">3.3</span> <span class="todo TODO">TODO</span> Interface with Blazegraph</h2>
-<h1 id="futurelog-ideas"><span class="header-section-number">4</span> Futurelog &amp; Ideas</h1>
+<h2 id="activitypub-client-to-server-interactions"><span class="header-section-number">4.1</span> <span class="todo TODO">TODO</span> <a href="https://www.w3.org/TR/activitypub/#client-to-server-interactions">ActivityPub Client to Server Interactions</a></h2>
+<h2 id="support-the-geopub-demonstrator"><span class="header-section-number">4.2</span> <span class="todo TODO">TODO</span> Support the <a href="https://miaengiadina.github.io/geopub/">GeoPub</a> demonstrator</h2>
+<h2 id="interface-with-blazegraph"><span class="header-section-number">4.3</span> <span class="todo TODO">TODO</span> Interface with Blazegraph</h2>
+<h1 id="user-interfaces-for-publishing-linked-social-data"><span class="header-section-number">5</span> User interfaces for publishing linked social data</h1>
+<p>User interfaces are required that allow users to create content with appropriate metadata and links to existing data. This might be done by automatically infering appropriate links or providing an autocomplete function that searches for existing data. Inspiration may be taken from the autocomplete functions built-in to the <a href="https://query.wikidata.org/">Wikidata Query Service</a> and <a href="http://comunica.linkeddatafragments.org/">Comunica Web Framework</a> as well as from the <a href="https://dokie.li/">dokieli editor</a>.</p>
+<h1 id="beyond-touristic-data-a-decentrallized-book-reading-network"><span class="header-section-number">6</span> Beyond touristic data: a decentrallized book reading network</h1>
+<p>To explore the ideas we could create a decentrallized social book reading network (similar to <a href="https://www.goodreads.com/">Goodreads</a>) built on top of the to be developed backend, where users can tag, comment and discuss books. Books are an excellent example application for exploring user interface ideas and testing the backend, as the set of metadata and annotations is known (e.g. genre, ISBN, author, publisher) and <a href="https://www.worldcat.org/">exists for a huge corpus of books</a>. Furthermore interesting semantic queries are very natural (e.g. &quot;books with average rating over 4 stars that have been read or mentioned by people I follow in the last 3 months&quot;).</p>
+<h1 id="futurelog-ideas"><span class="header-section-number">7</span> Futurelog &amp; Ideas</h1>
 <p>A collection of ideas. Not yet scheduled for research &amp; development.</p>
-<h2 id="clients-applications"><span class="header-section-number">4.1</span> Clients &amp; Applications</h2>
-<h3 id="data-bridges"><span class="header-section-number">4.1.1</span> Data bridges</h3>
+<h2 id="clients-applications"><span class="header-section-number">7.1</span> Clients &amp; Applications</h2>
+<h3 id="data-bridges"><span class="header-section-number">7.1.1</span> Data bridges</h3>
 <p>Import data from existing sources.</p>
 <p>Potential data sources include:</p>
 <ul>
@@ -205,22 +233,22 @@
 <li>Weather data (e.g. from <a href="https://www.meteoswiss.admin.ch/">MeteoSwiss</a>)</li>
 <li>Touristic platforms (e.g. <a href="https://discover.swiss/">discover.swiss</a>)</li>
 </ul>
-<h3 id="distributed-content-management-system"><span class="header-section-number">4.1.2</span> Distributed content management system</h3>
+<h3 id="distributed-content-management-system"><span class="header-section-number">7.1.2</span> Distributed content management system</h3>
 <p>Various actors may publish content. From this published content, one specific actor, the <em>curator</em>, can select content that should appear on a web site.</p>
 <p>Technically this may be implemented by defining a special collection of content that should appear on the web site and allowing the curator to add and remove content from this collection (with the ActivityStream <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-add"><code>Add</code></a> and <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-remove"><code>Remove</code></a> activities). The web site is then generated from the content in this special collection.</p>
 <p>Visitors of the web site do not need to know about the distributed mechanism in the background. They simply see the curated content.</p>
-<h3 id="event-calendar"><span class="header-section-number">4.1.3</span> Event calendar</h3>
+<h3 id="event-calendar"><span class="header-section-number">7.1.3</span> Event calendar</h3>
 <p>An application that shows a calendar view of events in a specific region.</p>
-<h3 id="map"><span class="header-section-number">4.1.4</span> Map</h3>
+<h3 id="map"><span class="header-section-number">7.1.4</span> Map</h3>
 <p>An application that shows a map with points of interest. An initial version exists <a href="https://miaengiadina.github.io/geopub/">here</a>.</p>
-<h3 id="existing-clients"><span class="header-section-number">4.1.5</span> Existing clients</h3>
+<h3 id="existing-clients"><span class="header-section-number">7.1.5</span> Existing clients</h3>
 <p>There are existing ActivityPub clients (e.g. <a href="https://fedilab.app/">Fedilab</a> and <a href="https://whalebird.org/en/desktop/contents">Whalebird</a>). Research is required to what extent they can be used for openEngiadina (what content types do they support?).</p>
-<h2 id="backend"><span class="header-section-number">4.2</span> Backend</h2>
-<h3 id="activitypub-server-to-server-interactions"><span class="header-section-number">4.2.1</span> ActivityPub Server to Server interactions</h3>
+<h2 id="backend"><span class="header-section-number">7.2</span> Backend</h2>
+<h3 id="activitypub-server-to-server-interactions"><span class="header-section-number">7.2.1</span> ActivityPub Server to Server interactions</h3>
 <p>Enable federation with other ActivityPub services.</p>
-<h3 id="content-moderation"><span class="header-section-number">4.2.2</span> Content moderation</h3>
+<h3 id="content-moderation"><span class="header-section-number">7.2.2</span> Content moderation</h3>
 <p>Given the <em>distributed manner of content creation</em> it is important that operators of backends have the ability to moderate content. Research into existing tools for moderation available in current ActivityPub implementaitons and what kind of tools are needed for openEngiadina is required.</p>
-<h3 id="content-discovery-searchability"><span class="header-section-number">4.2.3</span> Content discovery &amp; searchability</h3>
+<h3 id="content-discovery-searchability"><span class="header-section-number">7.2.3</span> Content discovery &amp; searchability</h3>
 <p>The ability to discover and search knowledge is extremely important. Further research in how this can be done (and is done in existing implementations) is required.</p>
 <p>Insight might be gained by studying existing frameworks for linked data and information retrieval such as <a href="https://jena.apache.org/">Apache Jena</a>, <a href="https://www.w3.org/TR/sparql11-query/">SPARQL</a> and <a href="https://xapian.org/">Xapian</a>.</p>
 </div>
