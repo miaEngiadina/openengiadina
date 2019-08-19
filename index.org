@@ -106,35 +106,35 @@ Some existing services:
 [[https://the-federation.info/][Currently there are]] almost 3 million users on the fediverse spread out on 4'500 servers.
 
 * Related projects
-*** [[https://www.datatourisme.gouv.fr/][DATAtourisme]]
-Open Data platform for touristic data. DATAtourisme also uses a Triplestore as underlying database ([[https://wiki.blazegraph.com/wiki/index.php/Main_Page][Blazegraph]]).
-*** [[https://joinmastodon.org/][Mastodon]] and [[https://pleroma.social/][Pleroma]]
+** [[https://www.datatourisme.gouv.fr/][DATAtourisme]]
+ Open Data platform for touristic data. DATAtourisme also uses a Triplestore as underlying database ([[https://wiki.blazegraph.com/wiki/index.php/Main_Page][Blazegraph]]).
+** [[https://joinmastodon.org/][Mastodon]] and [[https://pleroma.social/][Pleroma]]
 Popular Microblogging platforms that use the ActivityPub protocol.
 
 Both projects are [[https://gitlab.com/moodlenet/meta/wikis/generic-activitypub-library][restricted to a small set of object types]] that can be shared. openEngiadina aims to support any object type.
-*** [[http://ckan.org/][CKAN]]
+** [[http://ckan.org/][CKAN]]
 An open-source data portal platform widely used by public institutions to publish open data (e.g. [[https://zt.zuerich.com/en/open-data][Open Data Portal of Zürich Tourism]]).
 
 openEngiadina aims to be compatible with CKAN portals to a high degree. Data available in CKAN portals should be readily usable from within openEngiadina.
-*** [[https://commonspub.org/][CommonsPub]]
+** [[https://commonspub.org/][CommonsPub]]
 CommonsPub is a project to build a generic federated server, based on the ActivityPub web standard.
 
 Unlike CommonsPub openEngiadina uses a triplestore as underlying database.
-*** [[https://solid.inrupt.com/][Solid]]
+** [[https://solid.inrupt.com/][Solid]]
 Sold aims to create decentralized web where users are in control of where and how their data is stored.
 
 openEngiadina intends to make use of many of the standards published by the project (e.g. [[http://solid.github.io/web-access-control-spec/][Web Access Control]]).
-*** [[http://linkeddatafragments.org/][Linked Data Fragments]]
+** [[http://linkeddatafragments.org/][Linked Data Fragments]]
 A project exploring how to query Linked Data that is spread across the web.
 
 openEngiadina aims to use results by the project for federated queries and for user interfaces that provide autocompletion by live querying existing data sets.
 
 See also the [[http://comunica.linkeddatafragments.org/][Comunica Framework]] published by the project.
-*** [[https://openki.net/][Openki]]
+** [[https://openki.net/][Openki]]
 A web platform for promoting access to education by enabling peer-to-peer courses.
 
 openEngiadina shares the idea of crowdsourced creation of events but builds on the ActivityPub protocol.
-*** [[https://gitlab.com/spritely/spritely][Spritely]]
+** [[https://gitlab.com/spritely/spritely][Spritely]]
 Spritely aims to create a federated social network and is conducting various small experiments towards that goal. openEngiadina makes use of the research being conducted.
 * About
 
