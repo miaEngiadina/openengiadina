@@ -3,4 +3,4 @@
 
 openEngiadina is a platform for creating, publishing and using open local knowledge.
 
-Information in this repository has been updated and moved to the [openEngiadina website][https://openengiadina.net].
+Information in this repository has been updated and moved to the [[https://openengiadina.net][openEngiadina website]].
