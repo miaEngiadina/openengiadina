@@ -3,10 +3,4 @@
 
 openEngiadina is a platform for creating, publishing and using open local knowledge.
 
-This repository contains project documentation and other project information.
-
-* Pages
-
-Pages that appear on the GitHub Pages site (https://miaengiadina.github.io/openengiadina) can be built by running ~make~ ([[https://pandoc.org/][Pandoc]] is required). The site will be built in the [[./docs/][docs]] folder.
-
-The pages (e.g. [[./index.org][index.org]]) are formatted in [[https://orgmode.org/][Org mode]].
+Information in this repository has been updated and moved to the [openEngiadina website][https://openengiadina.net].
